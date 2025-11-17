@@ -13,8 +13,8 @@ const cart = () => {
         cartModal.style.display = ''
     }
 
-    cartBtn.addEventListener('click', openCart)
-    cartCloseBtn.addEventListener('click', closeCart)
+    // cartBtn.addEventListener('click', openCart)
+    // cartCloseBtn.addEventListener('click', closeCart)
 }
 
 export default cart
