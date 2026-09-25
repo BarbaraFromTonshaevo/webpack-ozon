@@ -1,2 +1,5 @@
 /node_modules
-package-lock.json
+/dist
+
+# Раньше SCSS собирался Live Sass Compiler в style/, теперь CSS собирает webpack
+/style

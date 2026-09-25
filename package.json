@@ -1,18 +1,27 @@
 {
-  "name": "db",
+  "name": "webpack-ozon",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode=production",
-    "watch": "webpack --watch --mode=development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "description": "Учебный интернет-магазин «Ozon» с интенсива GloAcademy: каталог, поиск, фильтры и корзина на vanilla JS, сборка Webpack + SCSS",
+  "engines": {
+    "node": ">=22.15"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Elkina Barbara",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "webpack": "^5.102.1",
-    "webpack-cli": "^6.0.1"
+    "css-loader": "^7.1.5",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.8",
+    "mini-css-extract-plugin": "^2.10.2",
+    "sass": "^1.105.0",
+    "sass-loader": "^17.0.1",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^6.0.0"
   }
 }
