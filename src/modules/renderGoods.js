@@ -1,3 +1,5 @@
+import { changeInfo } from "./changeInfo"
+
 const renderGoods = (goods) => {
     const goodsWrapper = document.querySelector('.goods')
     localStorage.setItem('goods', JSON.stringify(goods))
@@ -22,6 +24,16 @@ const renderGoods = (goods) => {
             `
         )
     });
+
+    if (goods.length === 0) {
+        goodsWrapper.insertAdjacentHTML('beforeend', `
+            <div class="col-12 goods-empty">
+                Ничего не найдено. Попробуйте изменить запрос или выбрать «Все товары» в каталоге
+            </div>
+        `)
+    }
+
+    changeInfo(goods.length)
 }
 
 export default renderGoods

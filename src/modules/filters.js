@@ -3,6 +3,7 @@ export const searchFilter= (goods, value) => {
 }
 
 export const categoryFilter = (goods, value) => {
+    if (!value) return goods
     return goods.filter((goodsItem) => {
         return goodsItem.category == value
     })

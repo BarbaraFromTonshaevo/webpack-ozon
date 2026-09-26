@@ -1,12 +1,11 @@
 import getData from "./getData"
 import renderGoods from "./renderGoods"
-import { categoryFilter } from "./filters"
+import { state, applyFilters } from './state'
 
 const catalog = () => {
     const btnCatalog = document.querySelector('.catalog-button > button')
     const catalogModal = document.querySelector('.catalog')
-    const catalogModalItem = document.querySelectorAll('.catalog li')
-
+    const catalogButtons = document.querySelectorAll('.catalog button')
 
     let isOpen = false
 
@@ -20,11 +19,21 @@ const catalog = () => {
         }
     })
 
-    catalogModalItem.forEach(item => {
-        item.addEventListener('click', (e) => {
-            const text = item.textContent
+    catalogButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            state.category = button.dataset.category
+
+            catalogButtons.forEach(btn => {
+                const isActive = btn === button
+                btn.classList.toggle('active', isActive)
+                btn.setAttribute('aria-pressed', isActive)
+            })
+
+            isOpen = false
+            catalogModal.style.display = ''
+
             getData().then((data) => {
-                renderGoods(categoryFilter(data, text))
+                renderGoods(applyFilters(data))
             })
         })
     })

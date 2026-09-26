@@ -118,19 +118,31 @@
 		margin: 0;
 		padding: 10px;
 		text-align: center;
-  
-		li {
-		  border-bottom: 1px solid #000;
-		  padding: 5px;
-  
-		  &:last-child {
-			border-bottom: none;
-		  }
-  
-		  &:hover {
-			background-color: #333;
-			color: #c5c5c5;
-		  }
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		width: 100%;
+	  }
+
+	  // Иначе пункты меню унаследуют синюю заливку кнопки «Каталог» (.catalog-button button)
+	  li > button {
+		width: 100%;
+		background-color: #fff;
+		color: #005bff;
+		border: 2px solid #005bff;
+
+		&:hover {
+		  background-color: #eaf1ff;
+		}
+
+		&:focus-visible {
+		  outline: 2px solid #001a34;
+		  outline-offset: 2px;
+		}
+
+		&.active {
+		  background-color: #005bff;
+		  color: #fff;
 		}
 	  }
   
@@ -485,7 +497,13 @@
 	  letter-spacing: 0.3px;
 	}
   }
-  
+
+  .goods-empty {
+	padding: 40px 0;
+	font-size: 24px;
+	color: #4d5f71;
+  }
+
   .cart {
 	display: none;
 	position: fixed;

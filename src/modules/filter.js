@@ -1,23 +1,25 @@
 import getData from "./getData"
 import renderGoods from "./renderGoods"
-import { priceFilter, hotSaleFilter } from "./filters"
+import { state, applyFilters } from "./state"
 
 const filter = () => {
     const minInput = document.getElementById('min')
     const maxInput = document.getElementById('max')
     const checkboxInput = document.getElementById('discount-checkbox')
     const checkboxSpan = document.querySelector('.filter-check_checkmark')
-    minInput.addEventListener('input', () => {
-        getData().then((data) => {
-            renderGoods(priceFilter(hotSaleFilter(data, checkboxInput.checked), minInput.value, maxInput.value))
-        })
-    })
 
-    maxInput.addEventListener('input', () => {
+    const update = () => {
+        state.min = minInput.value
+        state.max = maxInput.value
+        state.sale = checkboxInput.checked
         getData().then((data) => {
-            renderGoods(priceFilter(hotSaleFilter(data, checkboxInput.checked), minInput.value, maxInput.value))
+            renderGoods(applyFilters(data))
         })
-    })
+    }
+
+    minInput.addEventListener('input', update)
+
+    maxInput.addEventListener('input', update)
 
     checkboxInput.addEventListener('change', () => {
         if(checkboxInput.checked){
@@ -25,9 +27,7 @@ const filter = () => {
         }else{
             checkboxSpan.classList.remove('checked')
         }
-        getData().then((data) => {
-            renderGoods(priceFilter(hotSaleFilter(data, checkboxInput.checked), minInput.value, maxInput.value))
-        })
+        update()
     })
 }
 
