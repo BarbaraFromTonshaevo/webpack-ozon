@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';
@@ -61,6 +62,9 @@ module.exports = (env, argv) => {
       // Берёт index.html как шаблон и сам вставляет ссылки на собранные CSS и JS
       new HtmlWebpackPlugin({ template: './index.html' }),
       new MiniCssExtractPlugin({ filename: `css/[name]${hash}.css` }),
+      // Пути к фото товаров записаны строками в db.json, и webpack их не видит.
+      // Поэтому папку копируем как есть, без хешей, чтобы пути из JSON продолжали работать
+      new CopyPlugin({ patterns: [{ from: 'img/goods', to: 'img/goods' }] }),
     ],
 
     optimization: {

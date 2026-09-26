@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<rect width="200" height="200" rx="12" fill="#e9f7ef"/>
+<g transform="translate(68 40)" fill="#0a7f43" stroke="#0a7f43"><rect x="2" y="12" width="60" height="42" rx="6" fill="none" stroke-width="4"/>
+<rect x="36" y="22" width="16" height="24" rx="8" fill="none" stroke-width="3.5"/></g>
+<text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#001a34" text-anchor="middle"><tspan x="100" y="134">A4Tech Bloody</tspan><tspan x="100" y="151">V7M+B-071</tspan></text>
+</svg>

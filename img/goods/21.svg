@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<rect width="200" height="200" rx="12" fill="#f8ecf5"/>
+<g transform="translate(68 40)" fill="#9f3584" stroke="#9f3584"><circle cx="32" cy="32" r="28" fill="none" stroke-width="4"/><circle cx="32" cy="32" r="8" fill="none" stroke-width="4"/>
+<path d="M32 14a18 18 0 0 1 18 18" fill="none" stroke-width="3" stroke-linecap="round" opacity=".55"/></g>
+<text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#001a34" text-anchor="middle"><tspan x="100" y="134">ABBYY</tspan><tspan x="100" y="151">FotoTranslate</tspan></text>
+</svg>

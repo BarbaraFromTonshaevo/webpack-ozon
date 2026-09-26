@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<rect width="200" height="200" rx="12" fill="#eaf1ff"/>
+<g transform="translate(68 40)" fill="#005bff" stroke="#005bff"><path d="M18 22h28c9 0 14 6 16 16l2 12c1 7-7 10-11 5l-7-9H18l-7 9c-4 5-12 2-11-5l2-12c2-10 7-16 16-16z" fill="none" stroke-width="4" stroke-linejoin="round"/>
+<path d="M17 32v10M12 37h10" stroke-width="4" stroke-linecap="round"/><circle cx="44" cy="33" r="2.5" stroke="none"/><circle cx="50" cy="39" r="2.5" stroke="none"/></g>
+<text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#001a34" text-anchor="middle"><tspan x="100" y="134">Sony PlayStation</tspan><tspan x="100" y="151">4 Pro</tspan></text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<rect width="200" height="200" rx="12" fill="#e9f7ef"/>
+<g transform="translate(68 40)" fill="#0a7f43" stroke="#0a7f43"><rect x="2" y="16" width="60" height="34" rx="5" fill="none" stroke-width="4"/>
+<path d="M11 26h4M21 26h4M31 26h4M41 26h4M51 26h2M11 34h4M21 34h4M31 34h4M41 34h4M51 34h2M18 42h28" stroke-width="4" stroke-linecap="round"/></g>
+<text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#001a34" text-anchor="middle"><tspan x="100" y="134">Logitech Wireless</tspan><tspan x="100" y="151">Keyboard K360</tspan></text>
+</svg>
