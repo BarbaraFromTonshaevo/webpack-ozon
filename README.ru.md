@@ -8,6 +8,22 @@
 
 **Демо:** https://barbarafromtonshaevo.github.io/webpack-ozon/
 
+## Скриншоты
+
+**Каталог и корзина на десктопе**
+
+<p>
+  <img src="./screenshots/desktop-catalog.webp" alt="Каталог товаров на десктопе" width="49%">
+  <img src="./screenshots/desktop-cart.webp" alt="Открытая корзина с тремя товарами на десктопе" width="49%">
+</p>
+
+**Мобильная версия** (390 × 844)
+
+<p>
+  <img src="./screenshots/mobile-catalog.webp" alt="Каталог на мобильном" width="30%">
+  <img src="./screenshots/mobile-cart.webp" alt="Корзина на мобильном" width="30%">
+</p>
+
 ## Что умеет
 
 - **Каталог.** 28 товаров из `db/db.json` выводятся карточками, у товаров по акции есть плашка «Hot Sale».
@@ -128,22 +144,6 @@ python3 -m http.server 8000 -d /tmp/preview   # → http://localhost:8000/webpac
 При каждом пуше в `main` workflow [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) ставит зависимости через `npm ci` по `package-lock.json`, запускает `npm run build` и публикует `dist/` на GitHub Pages.
 
 Я выбрала GitHub Actions, а не пакет `gh-pages`, по трём причинам: собранные файлы не хранятся ни в одной ветке, сборка всегда идёт из того, что лежит в `main`, а не с моего компьютера, и отдельная команда `deploy` не нужна.
-
-## Скриншоты
-
-**Каталог и корзина на десктопе**
-
-<p>
-  <img src="./screenshots/desktop-catalog.webp" alt="Каталог товаров на десктопе" width="49%">
-  <img src="./screenshots/desktop-cart.webp" alt="Открытая корзина с тремя товарами на десктопе" width="49%">
-</p>
-
-**Мобильная версия** (390 × 844)
-
-<p>
-  <img src="./screenshots/mobile-catalog.webp" alt="Каталог на мобильном" width="30%">
-  <img src="./screenshots/mobile-cart.webp" alt="Корзина на мобильном" width="30%">
-</p>
 
 ## Что я доработала после интенсива
 

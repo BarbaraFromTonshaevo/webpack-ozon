@@ -8,6 +8,22 @@ A framework-free storefront: products are rendered from JSON, with search, categ
 
 **Live demo:** https://barbarafromtonshaevo.github.io/webpack-ozon/
 
+## Screenshots
+
+**Catalog and cart on desktop**
+
+<p>
+  <img src="./screenshots/desktop-catalog.webp" alt="Product catalog on desktop" width="49%">
+  <img src="./screenshots/desktop-cart.webp" alt="Open cart with three items on desktop" width="49%">
+</p>
+
+**Mobile** (390 × 844)
+
+<p>
+  <img src="./screenshots/mobile-catalog.webp" alt="Catalog on mobile" width="30%">
+  <img src="./screenshots/mobile-cart.webp" alt="Cart on mobile" width="30%">
+</p>
+
 ## Features
 
 - **Catalog.** 28 products from `db/db.json` are rendered as cards; discounted items get a "Hot Sale" badge.
@@ -128,22 +144,6 @@ python3 -m http.server 8000 -d /tmp/preview   # → http://localhost:8000/webpac
 On every push to `main`, the [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) workflow installs dependencies with `npm ci` from `package-lock.json`, runs `npm run build` and publishes `dist/` to GitHub Pages.
 
 I chose GitHub Actions over the `gh-pages` package for three reasons: build output isn't stored in any branch, the site is always built from what is in `main` rather than from my machine, and there's no separate `deploy` command to remember.
-
-## Screenshots
-
-**Catalog and cart on desktop**
-
-<p>
-  <img src="./screenshots/desktop-catalog.webp" alt="Product catalog on desktop" width="49%">
-  <img src="./screenshots/desktop-cart.webp" alt="Open cart with three items on desktop" width="49%">
-</p>
-
-**Mobile** (390 × 844)
-
-<p>
-  <img src="./screenshots/mobile-catalog.webp" alt="Catalog on mobile" width="30%">
-  <img src="./screenshots/mobile-cart.webp" alt="Cart on mobile" width="30%">
-</p>
 
 ## What I improved after the intensive
 
